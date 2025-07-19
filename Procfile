@@ -1,1 +1,1 @@
-web :gunicorn 'django_framework.wsgi'
+web: gunicorn django_framework.wsgi
