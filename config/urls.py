@@ -18,15 +18,16 @@ schema_views = get_schema_view(
         license=openapi.License(name='demo licence'),
     ),
     public=True,
-    permission_classes=[permissions.AllowAny, ],
+    permission_classes=[permissions.AllowAny,],
 
 )
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include('books.urls')),
-    path('api-auth/', include('rest_framework.urls')),
+    path('api/auth/', include('rest_framework.urls')),
     path('api/dj-rest-auth/', include('dj_rest_auth.urls')),
+    path('api/dj-rest-auth/registration/', include('dj_rest_auth.registration.urls')),
 
     path('swagger/', schema_views.with_ui(
         'swagger', cache_timeout=0), name='swagger_swagger_ui'

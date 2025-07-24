@@ -12,3 +12,13 @@ class Book(models.Model):
 
     def __str__(self):
        return self.title
+    
+class Comics(models.Model):
+    title = models.CharField(max_length=100)
+    subtitle = models.CharField(max_length=100)
+    author = models.CharField(max_length=100)
+    price = models.DecimalField(max_digits=30, decimal_places=2)
+
+
+
+

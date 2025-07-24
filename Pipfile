@@ -12,6 +12,7 @@ drf-yasg = "*"
 dj-rest-auth = "*"
 django-allauth = "*"
 gunicorn = "*"
+requests = "*"
 
 [dev-packages]
 
